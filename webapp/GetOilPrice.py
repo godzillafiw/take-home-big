@@ -9,7 +9,7 @@ import ast,logging
 def conn_db():
     try:
         logging.info('Connecting database to table...')
-        conn_string = 'postgresql://postgres:postgres@postgres-data:5432/warehouse'
+        conn_string = 'postgresql://postgres:postgres@postgres:5432/warehouse'
         db = create_engine(conn_string)
         conn = db.connect()
         return conn
