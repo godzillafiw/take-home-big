@@ -3,6 +3,7 @@ services:
 
   postgres:
     image: postgres:13-alpine
+    container_name: postgres
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
@@ -16,6 +17,7 @@ services:
 
   chrome:
     image: selenium/node-chrome:3.141.59-20210607
+    container_name: chrome
     volumes:
       - /dev/shm:/dev/shm
     depends_on:

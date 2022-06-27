@@ -9,7 +9,7 @@ app = Flask(__name__)
 def get_db_connection():
     try:
         conn = psycopg2.connect(
-            host='postgres-data',
+            host='postgres',
             port=5432,
             database='warehouse',
             user='postgres',
